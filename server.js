@@ -65,12 +65,10 @@ app.get('/version', async (req, res) => {
     }
   }
 });
-
 app.get('/app-ads.txt', (req, res) => {
+    res.type('text/plain');
     res.send('google.com, pub-3457408031269516, DIRECT, f08c47fec0942fa0');
 });
-
-
 // Start server
 app.listen(PORT, HOST, () => {
   console.log(`Server running at http://${HOST}:${PORT}`);
